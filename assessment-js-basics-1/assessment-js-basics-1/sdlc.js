@@ -22,5 +22,5 @@ const planning = "This is the first step, in which the end goal of the software 
 AnalysisofRequirements = "The analysis of requirements is a critical phase that focuses on umderstanding and documenting the needs and expectations of stakeholders for a software system."
 Design = "Phase that follows the requirements analysis phase and precedes the actual implementation."
 Implementatation = "Is the 4th step, whereas the actual coding or programming of the software occurs." 
-Testing&Integration = "The 5th step, that concentrates on making sure the software works or operates properly."
+TestingandIntegration = "The 5th step, that concentrates on making sure the software works or operates properly."
 Maintain = "This step is for ensuring that software remains to perform accordingly and make enhancements if there is a need for it."
