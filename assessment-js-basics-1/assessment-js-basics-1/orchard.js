@@ -49,7 +49,7 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 let totalAcres = 0;
-('let i = 0; i < fujiAcres.length; i++') {totalAcres =+ fujiAcres[i] + galaAcres[i] + pinkAcres [i];} 
+for ( let i = 0; i < fujiAcres.length; i++) {totalAcres =+ fujiAcres[i] + galaAcres[i] + pinkAcres [i];} 
 
 console.log('Total number of acres picked for the entire week: ${totalAcres}');
 // CODE HERE
