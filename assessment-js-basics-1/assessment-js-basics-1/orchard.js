@@ -25,7 +25,7 @@
 
     The prices are per pound and are written
     in cents. 
-*/
+*/ 
 
 const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
 const galaAcres = [5, 2, 4, 3, 6, 2, 4]
@@ -48,7 +48,10 @@ const pinkPrice = .55
 
     Log `totalAcres` to the console.
 */
+let totalAcres = 0;
+('let i = 0; i < fujiAcres.length; i++') {totalAcres =+ fujiAcres[i] + galaAcres[i] + pinkAcres [i];} 
 
+console.log('Total number of acres picked for the entire week: ${totalAcres}');
 // CODE HERE
 
 
@@ -66,7 +69,10 @@ const pinkPrice = .55
 
     Log `averageDailyAcres` to the console.
 */
-
+const daysInWeek = 7 
+const averageDailyAcres = totalAcres/daysInWeek; 
+averageDailyAcres = totalAcres / 7;
+console.log('Average acres picked per day: $ {averageDailyAcres}')
 // CODE HERE
 
 
@@ -105,6 +111,15 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
+acresLeft = 174;
+days = 0;
+const dailyAverage = 7;
+
+while (acresLeft > 0) {acresLeft -= dailyAverage; days++; 
+console.log('Day ${days}: ${acresLeft} acres left');}
+
+console.log('It took ${days} days to pick all the acres');
+
 // CODE HERE
 
 
@@ -132,7 +147,14 @@ let days = 0
     and use the push method to add new 
     values to the new arrays.
 */
+const acresPerVariety = 6.5
+const fujiTotalPicked = fujiApplesPicked.map(apples => apples * acresPerVariety);
+const galaTotalPicked = galaApplesPicked.map(apples => apples * acresPerVariety);
+const pinkTotalPicked = pinkApplesPicked.map(apples => apples * acresPerVariety);
 
+console.log("Daily Fuji Apples Picked (in tons):", fujiTotalPicked) 
+console.log("Daily Gala Apples Picked (in tons):", galaTotalPicked)
+console.log("Daily Pink Apples Picked (in tons):", pinkTotalPicked) 
 // CODE HERE
 
 // let fujiTons =
@@ -150,7 +172,7 @@ let days = 0
     Next, calculate the total number of 
     pounds picked per variety.
 
-    You'll need to add up the tons per
+    You'll need to add up the tons perSSsss
     each variety and convert the number 
     into pounds -- store that number in
     the variables given below. 
@@ -159,7 +181,19 @@ let days = 0
 
     Hint: there are 2000 pounds in a ton.
 */
+acresPerVariety = 6.5
+fujiTotalTons = fujiApplesPicked.reduce((total, apples) => total + apples, 0) * acresPerVariety;
+galaTotalTons = galaApplesPicked.reduce((total, apples) => total + apples, 0) * acresPerVariety;
+pinkTotalTons = pinkApplesPicked.reduce((total, apples) => total + apples, 0) * acresPerVariety;
 
+const poundsPerTon = 2000;
+const fujiPounds = fujiTotalTons * poundsPerTon;
+const galaPounds = galaTotalTons * poundsPerTon;
+const pinkPounds = pinkTotalTons * poundsPerTon;
+
+console.log("Total Fuji Apples Picked (in pounds): ",fujiPounds)
+console.log("Total Gala Apples Picked (in pounds): ", galaPounds)
+console.log("Total Pink Apples Picked (in pounds): ", pinkPounds)
 // CODE HERE 
 
 // let fujiPounds =
@@ -186,7 +220,13 @@ let days = 0
     Log each of the profits to the 
     console. 
 */
+const fujiRevenue = fujiPounds * fujiPricePerPound;
+const galaRevenue = galaPounds * galaPricePerPound;
+const pinkRevenue = pinkPounds * pinkPricePerPound;
 
+console.log("Revenue from Fuji Apples:", fujiRevenue);
+console.log("Revenue from gala Apples:", galaRevenue);
+console.log("Revenue from pink Apples:", pinkRevenue);
 // CODE HERE
 
 // let fujiProfit =
@@ -207,5 +247,15 @@ let days = 0
 
     Log `totalProfit` to the console.
 */
+const fujiCost = fujiPounds * fujiPricePerPound;
+const galaCost = galaPounds * galaPricePerPound;
+const pinkCost = pinkPounds * pinkPricePerPound;
 
+fujiRevenue = fujiPounds * fujiPricePerPound;
+galaRevenue = galaPounds * galaPricePerPound;
+pinkRevenue = pinkPounds * pinkPricePerPound;
+
+const totalPrice = (fujiRevenue + galaRevenue + pinkRevenue);
+
+console.log("Total Profit:", totalProfit);
 // CODE HERE
